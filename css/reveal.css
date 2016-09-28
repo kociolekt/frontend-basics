@@ -1323,3 +1323,11 @@ body {
 
 .zoomed .reveal .roll span:after {
   visibility: hidden; }
+
+/*********************************************
+ * Tag
+ *********************************************/
+.tag:hover {
+  color: #1b91ff;
+  cursor: pointer;
+}

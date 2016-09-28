@@ -12,6 +12,9 @@
     <!-- Theme used for syntax highlighting of code -->
     <link rel="stylesheet" href="lib/css/zenburn.css">
 
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="plugin/fancybox/jquery.fancybox.css">
+
     <!-- Printing and PDF exports -->
     <script>
       var link = document.createElement( 'link' );
@@ -160,13 +163,57 @@
         <section>
           <section>
             <h2>Elementy</h2>
-            <ul>
-              <li>Komentarze</li>
-              <li>Meta</li>
-              <li>Podstawowe elementy</li>
-              <li>Formularze</li>
-              <li>Pozostałe elementy</li>
-            </ul>
+            <p>
+              <span class="tag">h1</span>
+              <span class="tag">h2</span>
+              <span class="tag">h3</span>
+              <span class="tag">h4</span>
+              <span class="tag">h5</span>
+              <span class="tag">h6</span>
+              <span class="tag">p</span>
+              <span class="tag">strong</span>
+              <span class="tag">b</span>
+              <span class="tag">i</span>
+              <span class="tag">u</span>
+              <span class="tag">em</span>
+              <span class="tag">mark</span>
+              <span class="tag">small</span>
+              <span class="tag">del</span>
+              <span class="tag">ins</span>
+              <span class="tag">sub</span>
+              <span class="tag">sup</span>
+              <span class="tag">q</span>
+              <span class="tag">blockquote</span>
+              <span class="tag">abbr</span>
+              <span class="tag">address</span>
+              <span class="tag">cite</span>
+              <span class="tag">a</span>
+              <span class="tag">img</span>
+              <span class="tag">table tr th td</span>
+              <span class="tag">ul ol li dl dt dd</span>
+              <span class="tag">div</span>
+              <span class="tag">section</span>
+              <span class="tag">article</span>
+              <span class="tag">aside</span>
+              <span class="tag">details</span>
+              <span class="tag">dialog</span>
+              <span class="tag">header</span>
+              <span class="tag">footer</span>
+              <span class="tag">main</span>
+              <span class="tag">nav</span>
+              <span class="tag">menuitem</span>
+              <span class="tag">progress</span>
+              <span class="tag">summary</span>
+              <span class="tag">time</span>
+              <span class="tag">wbr</span>
+              <span class="tag">form</span>
+              <span class="tag">fieldset</span>
+              <span class="tag">legend</span>
+              <span class="tag">select</span>
+              <span class="tag">textarea</span>
+              <span class="tag">button</span>
+              <span class="tag">input</span>
+            </p>
           </section>
           <section>
             <h2>Komentarze</h2>
@@ -297,6 +344,22 @@
 &lt;/html&gt;
 </code></pre>
           </section>
+          <section>
+            <h2>Podstawowe elementy</h2>
+            <p>Link, Obrazki</p>
+<pre><code data-trim data-noescape>
+  &lt;!DOCTYPE html&gt;
+  &lt;html&gt;
+  &lt;body&gt;
+  &lt;p&gt;
+  &lt;a href=&quot;http://www.k2.pl&quot; target=&quot;_blank&quot;&gt;
+  &lt;img src=&quot;img/k2.jpg&quot;&gt;
+  &lt;/a&gt;
+  &lt;/p&gt;
+  &lt;/body&gt;
+  &lt;/html&gt;
+</code></pre>
+          </section>
         </section>
         <!-- CSS -->
         <section>
@@ -322,6 +385,7 @@
     </div>
 
     <script src="lib/js/head.min.js"></script>
+    <script src="lib/js/jquery-1.10.1.min.js"></script>
     <script src="js/reveal.js"></script>
 
     <script>
@@ -334,7 +398,19 @@
           { src: 'plugin/markdown/marked.js' },
           { src: 'plugin/markdown/markdown.js' },
           { src: 'plugin/notes/notes.js', async: true },
-          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/fancybox/jquery.fancybox.js', async: true, callback: function() {
+
+            $(".tag").fancybox({
+              openEffect  : 'none',
+              closeEffect : 'none',
+              type: 'iframe',
+              href: 'http://jsfiddle.net/zalun/NmudS/embedded/',
+              iframe : {
+                preload: false
+              }
+            });
+          } }
         ]
       });
     </script>
