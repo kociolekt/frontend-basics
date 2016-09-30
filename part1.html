@@ -227,7 +227,7 @@
           </section>
           <section>
             <h2>Audio</h2>
-            <p><a href="">przykład</a></p>
+            <p><a href="examples/audio.html" class="tag">przykład</a></p>
 <pre><code data-noescape>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -238,6 +238,77 @@
       &lt;source src=&quot;../media/horse.mp3&quot; type=&quot;audio/mpeg&quot;&gt;
       Your browser does not support the audio element.
     &lt;/audio&gt;
+
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+          </section>
+          <section>
+            <h2>Video</h2>
+            <p><a href="examples/video.html" class="tag">przykład</a></p>
+<pre><code data-noescape>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;body&gt;
+
+  &lt;video width=&quot;400&quot; controls&gt;
+    &lt;source src=&quot;mov_bbb.mp4&quot; type=&quot;video/mp4&quot;&gt;
+    &lt;source src=&quot;mov_bbb.ogg&quot; type=&quot;video/ogg&quot;&gt;
+    Your browser does not support HTML5 video.
+  &lt;/video&gt;
+
+  &lt;p&gt;
+    Video courtesy of
+    &lt;a href=&quot;http://www.bigbuckbunny.org/&quot; target=&quot;_blank&quot;&gt;Big Buck Bunny&lt;/a&gt;.
+  &lt;/p&gt;
+
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+          </section>
+          <section>
+            <h2>Canvas</h2>
+            <p><a href="examples/canvas.html" class="tag">przykład</a></p>
+<pre><code data-noescape>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;/&gt;
+    &lt;script type=&quot;application/javascript&quot;&gt;
+    function draw() {
+      var canvas = document.getElementById(&quot;canvas&quot;);
+      if (canvas.getContext) {
+        var ctx = canvas.getContext(&quot;2d&quot;);
+
+        ctx.fillStyle = &quot;rgb(200,0,0)&quot;;
+        ctx.fillRect (10, 10, 50, 50);
+
+        ctx.fillStyle = &quot;rgba(0, 0, 200, 0.5)&quot;;
+        ctx.fillRect (30, 30, 50, 50);
+      }
+    }
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body onload=&quot;draw();&quot;&gt;
+    &lt;canvas id=&quot;canvas&quot; width=&quot;150&quot; height=&quot;150&quot;&gt;&lt;/canvas&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+          </section>
+          <section>
+            <h2>SVG</h2>
+            <p><a href="examples/svg.html" class="tag">przykład</a></p>
+<pre><code data-noescape>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;body&gt;
+
+    &lt;h1&gt;My first SVG&lt;/h1&gt;
+
+    &lt;svg width=&quot;100&quot; height=&quot;100&quot;&gt;
+      &lt;circle cx=&quot;50&quot; cy=&quot;50&quot; r=&quot;40&quot; stroke=&quot;green&quot; stroke-width=&quot;4&quot; fill=&quot;yellow&quot; /&gt;
+      Sorry, your browser does not support inline SVG.
+    &lt;/svg&gt;
 
   &lt;/body&gt;
 &lt;/html&gt;
