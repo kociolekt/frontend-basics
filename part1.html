@@ -321,9 +321,16 @@
             <h2>CSS</h2>
             <ul>
               <li>Stylowanie</li>
+              <li>Selektory</li>
               <li>Box Model</li>
               <li>Pozycjonowanie</li>
             </ul>
+            <aside class="notes">
+              Skoro HTML został stworzony do opisywania zawartości (h1 to nagłówek p to akapit itp)<br/>
+              To nie powinniśmy używać go do stylowania elementów. Do tego służy CSS.<br/>
+              CSS pozwala rozdzielić style od HTML. W tej części prezentacji opowiem jak podłączyć style
+              do html, o box modelu i o pozycjonowaniu elementów w css.
+            </aside>
           </section>
           <section>
             <h2>Stylowanie</h2>
@@ -331,6 +338,10 @@
 <pre><code data-noescape>
   &lt;div style=&quot;background: red;&quot;&gt;&lt;/div&gt;
 </code></pre>
+            <aside class="notes">
+              Style CSS można zastosować na trzy różne sposoby. Można wpisywać je inline w elementy HTML w ten sposób jak
+              na tym przykładzie. Ale tak nie robimy.
+            </aside>
           </section>
           <section>
             <h2>Stylowanie</h2>
@@ -371,12 +382,114 @@
   &lt;/body&gt;
 &lt;/html&gt;
 </code></pre>
+            <aside class="notes">
+              Można definiować style CSS wewnątrz elementu head strony co jest lepsze od wpisywania styli bezpośrednio
+              w elementy html ma to swoje plusy jak na przykład style lecą do przeglądarki wraz z html w jednym requescie
+              ale lepiej nie definiować wszystkich styli tutaj ponieważ później okazuje się że plik ma milion linijek.
+              Na froncie wykorzystujemy style w head do AboveTheFold. Style które występują powyżej określonej wysokości
+              strony ładują się odrazu i użytkownik widzi ostylowaną stronę jeszcze przed tym jak wszystkie pliki css
+              zostaną załadowane.
+            </aside>
           </section>
           <section>
             <h2>Stylowanie</h2>
                 <p>Plik CSS</p>
 <pre><code data-noescape>&lt;link rel=&quot;stylesheet&quot; href=&quot;css/reveal.css&quot;&gt;</code></pre>
+            <aside class="notes">
+              Na froncie najczęściej korzystamy z zewnętrznych styli - takich które są w zewnętrznym pliku CSS.
+              Przedewszystkim daje to dużo wygody przy pracy i możliwość użycia styli z tego pliku na wielu stronach
+              bez definiowania ich drugi raz.
+            </aside>
+          </section>
+          <section>
+            <h2>Selektory</h2>
+            <p>Nazwa tagu</p>
+<pre><code data-noescape>
+h1 {
+  background: white;
+}
+</code></pre>
+            <aside class="notes">
+              Selektor nazwy tagu który pozwala ostylować wszystkie elementy h1 na stronie.
+              Na fronie z tego nie korzystamy.
+            </aside>
+          </section>
+          <section>
+            <h2>Selektory</h2>
+            <p>Nazwa klasy</p>
+<pre><code data-noescape>
+.menu {
+  background: white;
+}
+</code></pre>
+            <aside class="notes">
+              Selektory pozwalający ostylować wszystkie elementy określonej klasy (takie które mają ustawiony atrybut
+              class="menu" w tym wypadku). Takie selektory najczęściej są wykorzystywane na froncie. Znajduje to
+              uzasadnienie w tym że nazwę tagu można zmienić a styl elemetu nadal będzie ten sam. A co do Id
+            </aside>
+          </section>
+          <section>
+            <h2>Selektory</h2>
+            <p>Id elemenut</p>
+<pre><code data-noescape>
+#element-1 {
+  background: white;
+}
+</code></pre>
+            <aside class="notes">
+              Nie wykorzystujemy go w selektorach. W sensie jest taka możliwość ale nie robimy tego. Do id często
+              podłączone są funkcjonalności w js i czasem zmieniając wygląd elementu można przypadkiem coś wyłączyć.
+            </aside>
+          </section>
+          <section>
+            <h2>Selektory</h2>
+            <p>Po spacji</p>
+<pre><code data-noescape>
+.menu .button {
+  background: red;
+}
+</code></pre>
+            <aside class="notes">
+              W selektorach spacja powoduje wybór elementu wewnątrz innego elementu. W tym wypadku element o klasie button
+              wyszukiwany jest wewnątrz elementu o klasie menu. Oczywiście można robić więcej zagłębień ale na froncie
+              staramy się robić ich jak najmniej.
+            </aside>
+          </section>
+          <section>
+            <h2>Selektory</h2>
+            <p>Bezpośrednie dziecko</p>
+<pre><code data-noescape>
+.menu  > .button {
+  background: red;
+}
+</code></pre>
+            <aside class="notes">
 
+            </aside>
+          </section>
+          <section>
+            <h2>Selektory</h2>
+            <p>Przylegający element</p>
+<pre><code data-noescape>
+.menu + .menu-two {
+  background: red;
+}
+</code></pre>
+            <aside class="notes">
+
+            </aside>
+          </section>
+          <section>
+            <h2>Selektory</h2>
+            <p>Po przecinku</p>
+<pre><code data-noescape>
+.menu1, .menu2 {
+  background: red;
+}
+</code></pre>
+            <aside class="notes">
+
+            </aside>
           </section>
           <section>
             <h2>Box Model</h2>
