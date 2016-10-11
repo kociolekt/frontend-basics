@@ -64,6 +64,11 @@
               <li>Każdy z elementów HTML reprezentowany jest przez tag</li>
               <li>Elementy HTML są klockami z których składa się strona</li>
             </ul>
+            <aside class="notes">
+              Czym jest HTML? Jest językiem znaczników do tworzenia stron internetowych. Akronim HTML tłumaczy się jako
+              hipertekstowy język znaczników. Dokumenty HTML sładają się z elementów HTML ktore w kodzie reprezentowane
+              są jako tag/znacznik HTML.
+            </aside>
           </section>
           <section>
             <h2>Dokument HTML</h2>
@@ -82,6 +87,25 @@
   &lt;/body&gt;
 &lt;/html&gt;
 </code></pre>
+            <aside class="notes">
+              Definicja przykładowego dokumentu HTML wygląda tak jak na przykładzie. Składa się z Doctype, głównego
+              elementu html, elementu head i elementu body. W środku head zdefiniowany jest tytuł natomiast zawartość
+              strony definiujemy wewnątrz body w tym wypadku podstawowy nagłówek i akapit.
+
+              Doctype jest tagiem który definiuje wersję dokumentu html - mówi przeglądarce w jaki sposób ma interpretować
+              to co jest zdefiniowane poniżej. Kiedyś było kilka różnych wersji html. Był zwykły html strict,
+              był xhtml, był dhtml. Teraz na froncie odeszło się od wspierania starych i bardzo starych przeglądarek
+              więc używamy i polecamy html5 - tak jak w przykładzie.
+
+              html jest głównym elementem w dokumencie. Występuje zawsze i zazwyczaj się go nie styluje poza pewnymi
+              wyjątkami.
+
+              head to tag który opisuje dokument. Tutaj w przykładzie jest definicja tytułu dokumentu ale tagów w head
+              zazwyczaj jest więcej i opisują aspekty. Tag head nie jest widoczny w przeglądarce.
+
+              body - ciało dokumentu - jest widoczne w przeglądarce jak i wszystkie elementy wewnątrz niego - no chyba że
+              zdecydujemy inaczej.
+            </aside>
           </section>
           <section>
             <h2>Tagi</h2>
@@ -95,6 +119,13 @@
               <li>Tag zamykający ma / przed nazwą</li>
               <li>Występują też tagi bez tagów zamykających np.: &lt;br/&gt;</li>
             </ul>
+            <aside class="notes">
+              Ciągle mówię o tagach ale co to jest? Tagi zazwyczaj występują w parach. Tag otwierający i zamykający.
+              Tag zawsze ma zdefiniowaną nazwę. Para tagów musi posiada tą samą nazwę z czego drugi tag nazwę ma poprzedzoną
+              sleshem. Występują też tagi bez tagów zamykających jak na przykład tutaj br lub obrazek img.
+              Każdy z tagów może zawierać atrybuty ze standardowego zestawu atrybutów i dodatkowo atrybuty specyficzne
+              dla danego tagu.
+            </aside>
           </section>
           <section>
             <h2>Wersje HTML</h2>
@@ -128,6 +159,10 @@
                 <th>2014</th>
               </tr>
             </table>
+            <aside class="notes">
+              HTML przeszedł długą drogę żeby być tym czym jest teraz. Od pierwszych wersji w 1991 roku do ostatnio 2014
+              roku kiedy wyszła wersja html5. Pierwotnie HTML służył do
+            </aside>
           </section>
         </section>
         <!-- EDYTORY -->
@@ -464,19 +499,22 @@ h1 {
 }
 </code></pre>
             <aside class="notes">
-
+              Znak większości działa podobnie jak spacja ale w tym wypadku button musi być bezpośrednim dzieckiem menu.
+              Przydaje się przy wielokrotnych zagłębieniach tej samej struktury html która musi wyglądać inaczej na
+              każdym poziomie.
             </aside>
           </section>
           <section>
             <h2>Selektory</h2>
-            <p>Przylegający element</p>
+            <p>Następny element</p>
 <pre><code data-noescape>
 .menu + .menu-two {
   background: red;
 }
 </code></pre>
             <aside class="notes">
-
+              Element menu-two zostanie wyznaczony tylko w sytuacji kiedy menu poprzedza go w ramach tego samego rodzica.
+              Często stosuje się do stylowania czechboxów lub radiobuttonów.
             </aside>
           </section>
           <section>
@@ -488,12 +526,26 @@ h1 {
 }
 </code></pre>
             <aside class="notes">
-
+              Przecinek pozwala na przypisanie styli do wielu selektorów. W tym wypadku menu i menu2 będzie niało
+              czerwone tło.
             </aside>
           </section>
           <section>
             <h2>Box Model</h2>
             <img src="img/box-model.png" alt="Box Model">
+            <aside class="notes">
+              Nie chciał bym przechodzić przez wszystkie właściwości CSS ponieważ jest ich bardzo dużo. Poza tym
+              każdy przeczytał materiały. Spis tych właściwości jest dostępny w internecie i na każdej stronie jak
+              wciśniemy f12. Wolałbym tutaj opowiedzieć o samym box modelu żeby informacje które przekazuję
+              były uniwersalne.<br/>
+              Elementy box modelu<br>
+              Jakie właściwości wpływają na które elementy<br/>
+              box-sizing<br>
+              inline<br>
+              block<br>
+              inline-block<br>
+              inne displaye elementów
+            </aside>
           </section>
           <section>
             <h2>Box Model</h2>
@@ -564,9 +616,10 @@ h1 {
           </section>
         </section>
         <section>
-          <h2>Źródło</h2>
+          <h2>Materiały</h2>
           <ul>
-            <li><a href="https://developer.mozilla.org/pl/docs/Web/JavaScript">MDN</a></li>
+            <li><a href="https://developer.mozilla.org/pl/docs/Web">MDN</a></li>
+            <li><a href="http://www.w3schools.com/">W3C</a></li>
           </ul>
         </section>
         <section>
